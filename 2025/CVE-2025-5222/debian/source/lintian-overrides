@@ -1,0 +1,2 @@
+# upstream failure, patched not try to install it
+wayward-symbolic-link-target-in-source ../LICENSE [LICENSE]

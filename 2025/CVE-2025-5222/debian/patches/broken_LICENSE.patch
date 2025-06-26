@@ -1,0 +1,20 @@
+Description: do not try to install broken LICENSE file
+ ICU 74.2 release broke LICENSE file, it is now a symlink outside the source
+ tree. As such, don't try to install it.
+Author: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Forwarded: no
+Last-Update: 2023-12-14
+
+---
+
+--- icu-74.2.orig/source/Makefile.in
++++ icu-74.2/source/Makefile.in
+@@ -190,7 +190,7 @@ install-icu: $(INSTALLED_BUILT_FILES)
+ 	$(INSTALL_SCRIPT) $(top_srcdir)/install-sh $(DESTDIR)$(pkgdatadir)/install-sh
+ 	@$(MKINSTALLDIRS) $(DESTDIR)$(libdir)/pkgconfig
+ 	$(INSTALL_DATA) $(ALL_PKGCONFIG_FILES) $(DESTDIR)$(libdir)/pkgconfig/
+-	$(INSTALL_DATA) $(top_srcdir)/../LICENSE $(DESTDIR)$(pkgdatadir)/LICENSE
++#	$(INSTALL_DATA) $(top_srcdir)/../LICENSE $(DESTDIR)$(pkgdatadir)/LICENSE
+ ifeq ($(INSTALL_ICU_CONFIG),true)
+ 	$(INSTALL_SCRIPT) $(top_builddir)/config/icu-config $(DESTDIR)$(bindir)/icu-config
+ endif
