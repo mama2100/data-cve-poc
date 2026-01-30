@@ -1,0 +1,954 @@
+{
+    "agencies": {
+        "agentUpdate": "Update computers",
+        "edit": {
+            "autorun": "Autodeploy vaccines",
+            "code": "Code",
+            "department": "Department",
+            "depending": "Depending on",
+            "expiration": "Expiration date",
+            "licenseQuantity": "Number of licenses",
+            "name": "Name",
+            "notifyAgents": "Notify agents",
+            "parent": "+ Parent",
+            "sector": "Sector",
+            "serviceType": "Service",
+            "serviceTypes": {
+                "classified": "Classified",
+                "federated": "Federated",
+                "main": "Main"
+            }
+        },
+        "globalActions": {
+            "downloadCSV": {
+                "name": "Download CSV"
+            },
+            "downloadCSVCMDB": {
+                "name": "Download CSV (CMDB)"
+            },
+            "move": {
+                "error": "It was not possible to move the agencies",
+                "name": "Move agencies",
+                "ok": "Agencies moved to new destination"
+            },
+            "update": {
+                "dialog": {
+                    "content": "Do you want to update all computers from all agencies to last version?",
+                    "title": "Update all computers"
+                },
+                "name": "Update computers"
+            },
+            "updateInfo": {
+                "name": "Update info"
+            }
+        },
+        "headers": {
+            "agencies": "agencies",
+            "code": "code",
+            "computers": "computers",
+            "date": "last conection",
+            "name": "Name",
+            "state": "vaccines status",
+            "topAgency": "Federation",
+            "version": "version"
+        },
+        "incremental": "+ Create a new agency",
+        "label": "agencies",
+        "modal": {
+            "agentUpdate": {
+                "content": "Do you want to update agency's computers?",
+                "title": "Update computers"
+            },
+            "delete": {
+                "content": "Do you want to continue with the agency deletion?",
+                "title": "Delete agency"
+            },
+            "moveSelection": {
+                "actOnChildren": "Move dependent agencies",
+                "content": "Do you want to move the selected agencies to another instance and sector?",
+                "title": "Move selected agencies"
+            }
+        },
+        "placeholder": "what agency are you looking for?"
+    },
+    "alerts": {
+        "emptyState": {
+            "msg": "There are no alerts at this time"
+        },
+        "globalActions": {
+            "downloadCSV": {
+                "name": "Download CSV"
+            },
+            "rejectSelected": {
+                "name": "Mark selected alerts as false positive"
+            },
+            "resolveSelected": {
+                "name": "Resolve selected alerts"
+            }
+        },
+        "headers": {
+            "computer": "computer",
+            "date": "date",
+            "lastActiveAlerts": "Last active alerts",
+            "message": "message"
+        },
+        "label": "alerts",
+        "modal": {
+            "reject": {
+                "content": "Do you want to flag this alert as fake positive?",
+                "title": "Fake positive"
+            },
+            "rejectSelected": {
+                "content": "Do you want to mark selected alerts as false positive?",
+                "title": "False positive"
+            },
+            "resolve": {
+                "content": "Do you want to flag this alert as solved?",
+                "title": "Resolve"
+            },
+            "resolveSelected": {
+                "content": "Do you want to mark the selected alerts as resolved?",
+                "title": "Resolve"
+            }
+        },
+        "placeholder": "what alert are you looking for?",
+        "reject": "¿Mark as fake positive?",
+        "resolve": "¿Resolve?"
+    },
+    "audit": {
+        "edit": {
+            "agencies": "Agencies",
+            "content": "Content",
+            "event": "Event",
+            "username": "Username"
+        },
+        "globalActions": {
+            "downloadCSV": {
+                "name": "Download CSV"
+            }
+        },
+        "headers": {
+            "agency": "Agency",
+            "content": "Content",
+            "createdOn": "Creation",
+            "event": "Event",
+            "username": "Username"
+        },
+        "label": "Audit",
+        "panel": {
+            "title": {
+                "view": "View event"
+            }
+        },
+        "placeholder": "What record are you looking for?"
+    },
+    "certs": {
+        "edit": {
+            "global": "Global",
+            "name": "Name"
+        },
+        "headers": {
+            "createdOn": "Creation",
+            "global": "Global",
+            "since": "Since",
+            "until": "Until"
+        },
+        "incremental": "Upload a new certificate",
+        "label": "Certificates",
+        "modal": {
+            "delete": {
+                "content": "Do you want to continue with the deletion of certificate?",
+                "title": "Delete certificate"
+            }
+        },
+        "placeholder": "What certificate are you looking for?"
+    },
+    "computers": {
+        "edit": {
+            "name": "+ Name",
+            "tag": "+ Tag"
+        },
+        "globalActions": {
+            "delete": {
+                "dialog": {
+                    "content": "Do you want to continue deleting all computers?",
+                    "title": "Delete all computers"
+                },
+                "name": "Delete computers"
+            },
+            "deleteSelectedAgents": {
+                "name": "Delete selected computers"
+            },
+            "downloadCSV": {
+                "name": "Download as CSV"
+            },
+            "move": {
+                "error": "It was not possible to move computers",
+                "name": "Move selected computers",
+                "ok": "Computers moved to new destination"
+            },
+            "uninstallAllAgents": {
+                "dialog": {
+                    "content": "Do you want to continue uninstalling Microclaudia from this agency?",
+                    "title": "Uninstall Microclaudia from this agency"
+                },
+                "name": "Uninstall from all computers"
+            },
+            "uninstallSelectedAgents": {
+                "name": "Uninstall selected computers"
+            }
+        },
+        "headers": {
+            "agent": "agent",
+            "connection": "last connection",
+            "implemented": "implemented",
+            "ipAddress": "IP address",
+            "notApplied": "Not applied",
+            "so": "operating system",
+            "state": "vaccines status"
+        },
+        "inactiveReason": "This computer will be removed in its next connection",
+        "info": {
+            "caption": "Caption",
+            "cores": "Cores",
+            "CPU": "CPU",
+            "description": "Description",
+            "disks": "Disc | \\nDiscs",
+            "domain": "Domain",
+            "interfaces": "Interfaces",
+            "ipAddress": "IP adress | IP addresses",
+            "logicalDisks": "Logical disks",
+            "macAddress": "MAC address",
+            "memory": "Memory",
+            "name": "Name",
+            "osName": "Operating system",
+            "size": "Size",
+            "speed": "Speed",
+            "users": "Users | \\nUser",
+            "version": "Version"
+        },
+        "installationMode": {
+            "golden": "Golden installation mode",
+            "vdi": "VDI installation mode"
+        },
+        "label": "computers",
+        "modal": {
+            "delete": {
+                "content": "Do you want to continue deleting computer?",
+                "title": "Delete computer"
+            },
+            "deleteSelectedAgents": {
+                "content": "Do you want to continue with the removal of Microclaudia from selected computers?",
+                "title": "Delete Microclaudia from selected computers"
+            },
+            "moveSelection": {
+                "content": "Do you want to move the selected computers to another agency?",
+                "title": "Move selected computers"
+            },
+            "uninstallAgent": {
+                "content": "Do you want to continue uninstalling Microclaudia from this computer?",
+                "title": "Uninstall Microclaudia from this computer"
+            },
+            "uninstallSelectedAgents": {
+                "content": "Do you want to continue uninstalling Microclaudia from selected computers?",
+                "title": "Uninstall Microclaudia from selected computers"
+            }
+        },
+        "placeholder": "what computer are you looking for?"
+    },
+    "config": {
+        "edit": {
+            "description": "Description",
+            "name": "Name"
+        },
+        "headers": {
+            "description": "Description",
+            "property": "Property",
+            "value": "Value"
+        },
+        "label": "Configuration",
+        "panel": {
+            "title": {
+                "edit": "Edit settings"
+            }
+        },
+        "placeholder": "What configuration are you looking for?"
+    },
+    "customError": {
+        "text": "An error has occurred"
+    },
+    "dashboard": {
+        "charts": {
+            "agencyEvolution": "Evolution of agencies",
+            "alertEvolution": "Evolution of alerts",
+            "alertsByAgency": {
+                "error": "Without alerts",
+                "title": "Alerts by agency (Top 8)"
+            },
+            "alertsByComputer": {
+                "error": "Without alerts",
+                "title": "Alerts by computer (Top 8)"
+            },
+            "alertsBySector": {
+                "error": "Without alerts",
+                "title": "Alerts by sector (Top 8)"
+            },
+            "alertsByVaccine": {
+                "error": "Without alerts",
+                "title": "Alerts by vaccine (Top 8)"
+            },
+            "avaliableVaccinesEvolution": "Evolution of avaliable vaccines",
+            "byagency": {
+                "error": "No deployed",
+                "title": "Deployments by agency (Top 5)"
+            },
+            "bysector": {
+                "error": "No deployed",
+                "title": "Deployments by sector (Top 5)"
+            },
+            "computerEvolution": "Evolution of connected computers",
+            "offline": {
+                "error": "Without offline computers",
+                "title": "Offline computers (Top 5)"
+            },
+            "range": {
+                "last30Days": "Last 30 days",
+                "last365Days": "Last 12 months",
+                "last7Days": "Last 7 days"
+            },
+            "so": {
+                "error": "Without information",
+                "title": "Operating systems (Top 5)"
+            },
+            "status": {
+                "error": "Without information",
+                "title": "Computer status",
+                "values": {
+                    "hard": "Offline > 12h",
+                    "low": "Online",
+                    "medium": "Offline < 12h"
+                }
+            },
+            "totalAgencies": {
+                "subtitle": "agencies",
+                "title": "total"
+            },
+            "totalAlerts": {
+                "subtitle": "generated",
+                "title": "alerts"
+            },
+            "totalComputers": {
+                "subtitle": "computers",
+                "title": "total"
+            },
+            "totalExecuted": {
+                "subtitle": "implemented",
+                "title": "vaccines"
+            },
+            "totalVaccines": {
+                "subtitle": "automatic",
+                "title": "total",
+                "title2": "vaccines"
+            },
+            "userEvolution": "Evolution of connected users",
+            "version": {
+                "error": "Without information",
+                "title": "Version distribution"
+            },
+            "versionall": {
+                "error": "Without versions",
+                "title": "Agent versions (Top 5)"
+            }
+        },
+        "config": {
+            "notify": "Agent notifications"
+        },
+        "label": "dashboard"
+    },
+    "faqs": {
+        "label": "Frequently asked questions",
+        "placeholder": "what are you looking for?"
+    },
+    "feedback": {
+        "api": {
+            "error": {
+                "certs": {
+                    "exists": "Certificate already exists"
+                },
+                "email": {
+                    "required": "Email is not valid"
+                },
+                "fileTooBig": "The file is too large. Make a selection of agencies with the search engine.",
+                "password": {
+                    "notvalid": "The password is not valid",
+                    "required": "Password is required",
+                    "sameAsPrevious": "The new password cannot be the same as the old one",
+                    "unmatched": "Passwords don't match"
+                },
+                "user": {
+                    "notfound": "User not found"
+                },
+                "username": {
+                    "exists": "User already exists"
+                }
+            }
+        },
+        "create": {
+            "agency": {
+                "error": "It is not possible to create the agency",
+                "ok": "The agency has been created"
+            },
+            "cert": {
+                "error": "It is not possible to create the certificate",
+                "ok": "The certificate has been created"
+            },
+            "instance": {
+                "error": "Failed to create instance",
+                "ok": "Instance created"
+            },
+            "instances": {
+                "error": "It was not possible to create instance",
+                "ok": "Instance created"
+            },
+            "news": {
+                "error": "It was not possible to create news item",
+                "ok": "News item created"
+            },
+            "sector": {
+                "error": "It is not possible to create the sector",
+                "ok": "The sector has been created"
+            },
+            "user": {
+                "error": "It is not possible to create the user",
+                "ok": "The user has been created"
+            },
+            "vaccine": {
+                "error": "It is not possible to create the vaccine",
+                "ok": "The vaccine has been created"
+            }
+        },
+        "delete": {
+            "agency": {
+                "error": "It is not possible to remove the agency",
+                "ok": "The agency has been removed"
+            },
+            "cert": {
+                "error": "It is not possible to remove the certificate",
+                "ok": "The certificate has been removed"
+            },
+            "computers": {
+                "bulk": {
+                    "error": "Computers could not be deleted",
+                    "ok": "Computers eliminated"
+                }
+            },
+            "instance": {
+                "error": "It has not been possible to delete instance",
+                "ok": "Instance deleted"
+            },
+            "news": {
+                "error": "It has not been possible to delete news item",
+                "ok": "News item deleted"
+            },
+            "user": {
+                "error": "It is not possible to remove the user",
+                "ok": "The user has been removed"
+            },
+            "vaccine": {
+                "error": "It is not possible to remove the vaccine",
+                "ok": "The vaccine has been removed"
+            }
+        },
+        "exclude": {
+            "vaccine": {
+                "error": "It is not possible to exclude the vaccine",
+                "ok": "The vaccine has been excluded"
+            }
+        },
+        "execute": {
+            "vaccine": {
+                "error": "It is not possible to execute the vaccine",
+                "ok": "The vaccine has been executed"
+            }
+        },
+        "export": {
+            "vaccine": {
+                "error": "It was not possible to export the vaccines",
+                "ok": "Vaccines exported"
+            }
+        },
+        "import": {
+            "vaccine": {
+                "error": "It was not possible to import the vaccines",
+                "ok": "Vaccines imported"
+            }
+        },
+        "include": {
+            "vaccine": {
+                "error": "It is not possible to include the vaccine",
+                "ok": "The vaccine has been included"
+            }
+        },
+        "reject": {
+            "alerts": {
+                "bulk": {
+                    "error": "It was not possible to mark alerts as false positive",
+                    "ok": "Alerts marked as false positive"
+                }
+            }
+        },
+        "resolve": {
+            "alerts": {
+                "bulk": {
+                    "error": "It was not possible to resolve alerts",
+                    "ok": "Alerts resolved"
+                }
+            }
+        },
+        "selfexecute": {
+            "activate": {
+                "vaccine": {
+                    "error": "It is not possible to activate the self-execution",
+                    "ok": "The self-execution has been activated"
+                }
+            },
+            "deactivate": {
+                "vaccine": {
+                    "error": "It is not possible to deactivate the self-execution",
+                    "ok": "The self-execution has been deactivated"
+                }
+            }
+        },
+        "stop": {
+            "vaccine": {
+                "error": "It is not possible to stop the vaccine",
+                "ok": "The vaccine has been stopped"
+            }
+        },
+        "twoFA": {
+            "reset": {
+                "error": "It has not been possible to reset the two-factor authentication code",
+                "ok": "Two-factor authentication code reset"
+            }
+        },
+        "uninstall": {
+            "computers": {
+                "bulk": {
+                    "error": "Failed to uninstall computers",
+                    "ok": "Computers uninstalled"
+                }
+            }
+        },
+        "update": {
+            "agency": {
+                "error": "It was not possible to update the agency",
+                "ok": "The agency has been updated"
+            },
+            "agent": {
+                "error": "It was not possible to update the computers",
+                "ok": "Computers updated"
+            },
+            "alert": {
+                "error": "It was not possible to update the alert",
+                "ok": "Alert updated"
+            },
+            "computer": {
+                "error": "It was not possible to update the computer",
+                "ok": "Computer updated"
+            },
+            "config": {
+                "error": "It was not possible to update the configuration",
+                "ok": "Configuration updated"
+            },
+            "instance": {
+                "error": "Failed to update instance",
+                "ok": "Instance updated"
+            },
+            "news": {
+                "error": "It has not been possible to update news item",
+                "ok": "News item updated"
+            },
+            "update": {
+                "error": "It has not been possible to update instance",
+                "ok": "Instance updated"
+            },
+            "user": {
+                "error": "It was not possible to update the user",
+                "ok": "User updated"
+            },
+            "vaccine": {
+                "error": "It was not possible to update the vaccine",
+                "ok": "Vaccine updated"
+            }
+        }
+    },
+    "generic": {
+        "accept": "Accept",
+        "actions": "Actions",
+        "agencyAutoapply": "Autoapply vaccines",
+        "agencyNotify": "Agent notifications",
+        "bulkActions": "Bulk actions",
+        "cancel": "Cancel",
+        "closesession": "Close session",
+        "confirm": "Do we confirm?",
+        "copyToClipboard": "Copy to clipboard",
+        "delete": "Delete",
+        "disabled": "disabled",
+        "download": {
+            "csv": "Download CSV",
+            "error": "Unable to download",
+            "ok": "The download has been added to the download area"
+        },
+        "edit": "Edit",
+        "enabled": "enabled",
+        "exclude": "Exclude",
+        "excludeinclude": "Exclude/Include",
+        "execute": "Execute",
+        "file": {
+            "acceptedFormats": "Accepted formats: | Accepted Formats:",
+            "dropInfo": "or drop here",
+            "error": {
+                "fileTooBig": "Couldn't upload file. Your file is too big.",
+                "invalid": "File format not allowed.",
+                "malformed": "File does not have the correct structure"
+            },
+            "info": "Click to upload file"
+        },
+        "fold": "Fold",
+        "forbiddeninput": "Character not allowed ({0})",
+        "include": "Include",
+        "invalidEmail": "Email format looks incorrect",
+        "isUpdating": "Updating information right now...",
+        "lastUpdate": "Last update",
+        "lifecycle": {
+            "states": {
+                "appliedNotRequired": "Applied and not required",
+                "appliedRequired": "Applied and required",
+                "appliedWithError": "Applied with error",
+                "notAppliedNotRequired": "Not applied and not required",
+                "notAppliedRequired": "Not applied and required",
+                "pendingNotRequired": "Pending and not required",
+                "pendingRequired": "Pending and required"
+            }
+        },
+        "matches": "Matches",
+        "no": "No",
+        "nonoverlapping": "Not matches",
+        "notify": "Notify",
+        "notMatchingPasswords": "Passwords don't match",
+        "notValidPassword": "Password does not meet the requirements of the application",
+        "open": "Open",
+        "others": "others",
+        "partialmatches": "Showing {count} of {total} matches",
+        "processNotInitiated": "The update process has not started",
+        "selectCert": "Select cert",
+        "selection": {
+            "bulk": {
+                "activate": "Activate selection",
+                "cancel": "Cancel selection"
+            },
+            "count": "{count} selected item | {count} selected items",
+            "noSelection": "No item selected",
+            "selectPage": "Select all records from current page"
+        },
+        "selectionreset": "Reset",
+        "selectSector": "Select sector",
+        "selectTarget": "Select destination",
+        "show": "Show",
+        "state": {
+            "failed": "application failed",
+            "notapply": "does not apply",
+            "notinstalled": "not installed",
+            "obsolete": "obsolete",
+            "pending": "pending",
+            "updated": "updated"
+        },
+        "stop": "Stop",
+        "textCopied": "Text copied to clipboard",
+        "typing": "Start typing...",
+        "unfold": "Unfold",
+        "uninstallAgent": "Uninstall Microclaudia from this computer",
+        "view": "See",
+        "yes": "Yes"
+    },
+    "instances": {
+        "edit": {
+            "description": "Description",
+            "name": "Name",
+            "server": "Server"
+        },
+        "headers": {
+            "apikey": "Apikey",
+            "connectedOn": "Last connection",
+            "description": "Description",
+            "server": "Server"
+        },
+        "incremental": "Create a new instance",
+        "label": "Federated instances",
+        "modal": {
+            "delete": {
+                "content": "Do you want to continue with the deletion of instance?",
+                "title": "Delete instance"
+            }
+        },
+        "placeholder": "What instance are you looking for?"
+    },
+    "login": {
+        "enter": "enter",
+        "fail": "could not login",
+        "password": "Password",
+        "twoFA": {
+            "reset": "Reset Two-factor authentication code"
+        },
+        "user": "User"
+    },
+    "menu": {
+        "federatedAgencies": "Federated agencies",
+        "localEntitiesCV": "Local entities VC",
+        "management": "Management"
+    },
+    "modal": {
+        "confirm": {
+            "agency": {
+                "changeSector": {
+                    "content": "An agency is going to be moved to another sector",
+                    "message": "This agency has dependent agencies. Do you want to move them to the sector of the parent agency?",
+                    "title": "Move dependent agencies"
+                }
+            },
+            "vaccine": {
+                "autorun": {
+                    "content": "Do you want to activate autorun?",
+                    "title": "Important info"
+                },
+                "play": {
+                    "content": "Do you want to proceed?",
+                    "title": "Important info"
+                }
+            }
+        }
+    },
+    "news": {
+        "edit": {
+            "body": "Body",
+            "headline": "Headline"
+        },
+        "emptyState": {
+            "msg": "There are no news at this time"
+        },
+        "globalActions": {
+            "privilegedView": {
+                "name": "Show admin view"
+            },
+            "unprivilegedView": {
+                "name": "Show user view"
+            }
+        },
+        "headers": {
+            "body": "Body",
+            "createdOn": "Creation",
+            "latestNews": "Latest news",
+            "updatedOn": "Updated on"
+        },
+        "incremental": "Create news item",
+        "label": "News",
+        "modal": {
+            "delete": {
+                "content": "Do you want to continue with the deletion of news item?",
+                "title": "Delete news item"
+            }
+        },
+        "placeholder": "What news are you searching for?"
+    },
+    "password": {
+        "change": "Change password",
+        "changepassword": "Change password",
+        "changereason": "Your password has expired or is the first time you access with this user. Password must be changed according to platform criteria.",
+        "current": "Current",
+        "help": "The new password must contain at least 8 characters, including numbers, lowercase letters, uppercase letters and at least one special character !@#$%^&",
+        "new": "New",
+        "password": "Password",
+        "repeat": "Repeat"
+    },
+    "roles": {
+        "ROLE_ADMIN": "Administrator",
+        "ROLE_CLASSIFIED": "Classified",
+        "ROLE_MANAGER": "Manager",
+        "ROLE_SERVICEDESK": "Service Desk",
+        "ROLE_USER": "User"
+    },
+    "sectors": {
+        "edit": {
+            "name": "Name"
+        },
+        "headers": {
+            "name": "name"
+        },
+        "incremental": "+ Create a new sector",
+        "label": "sectors",
+        "modal": {
+            "delete": {
+                "content": "Do you want to continue with the sector deletion?",
+                "title": "Delete sector"
+            }
+        },
+        "placeholder": "what sector are you looking for?"
+    },
+    "user": {
+        "password": {
+            "empty": "All fields are mandatory",
+            "notmatch": "Passwords don't match",
+            "notvalid": "The current password does not exists on the database",
+            "validation": "The new password must contain at least 8 characters, including numbers, lowercase letters, uppercase letters and at least one special character !@#$%^&"
+        }
+    },
+    "users": {
+        "admin": "administrador",
+        "edit": {
+            "2fa": "2fa authentication",
+            "admin": "Admin",
+            "agency": "Agency",
+            "changepassword": "Change password",
+            "email": "Email",
+            "enabled": "Enabled",
+            "firstname": "First name",
+            "lastname": "Last name",
+            "new": "new",
+            "notify": "Notify",
+            "password": "Password",
+            "repeat": "repeat",
+            "reset2fa": "Reset 2FA",
+            "role": "Role",
+            "user": "User"
+        },
+        "globalActions": {
+            "downloadCSV": {
+                "name": "Download CSV"
+            }
+        },
+        "headers": {
+            "agency": "agency",
+            "email": "email",
+            "firstname": "First name",
+            "lastname": "Last name",
+            "role": "role",
+            "status": "estado"
+        },
+        "incremental": "+ Create a new user",
+        "label": "users",
+        "modal": {
+            "delete": {
+                "content": "Do you want to continue with the user deletion?",
+                "title": "Delete user"
+            }
+        },
+        "placeholder": "what user are you looking for?"
+    },
+    "vaccines": {
+        "edit": {
+            "description": "Description",
+            "expiration": "+ Expiration date",
+            "min_version": "+ Min. version",
+            "name": "Name",
+            "os": "+ Operating system",
+            "rules": {
+                "action": "action",
+                "both": "Both",
+                "command_line_has_ryuk_hash": "command",
+                "command_line_matches": "command line",
+                "content": "content",
+                "dangerous": "Show important info",
+                "dangerousMsg": "+ Type a warning text",
+                "data_type": "Type",
+                "dbghook": "Debugger hook",
+                "description": "description",
+                "event": "event",
+                "event_name": "event",
+                "exception_commandline": "command line",
+                "exception_parent": "parent process",
+                "exception_process": "process",
+                "exceptions": "Exceptions",
+                "executable_path_matches": "process",
+                "file": "file",
+                "global": "Global",
+                "heritable": "Heritable",
+                "hidden_attr": "Hide file path",
+                "initialOwner": "Initial Owner",
+                "initialState": "InitialState",
+                "key": "Key",
+                "kill_parent": "Kill parent process",
+                "kill_process": "Kill process",
+                "local": "Local",
+                "manualReset": "ManualReset",
+                "mutex": "mutex",
+                "mutex_name": "mutex",
+                "name": "Name",
+                "parent_executable_path_matches": "parent process",
+                "path": "path",
+                "process_monitor": "procmon",
+                "process_monitor#ryuk_hash": "procmon ryuk hash",
+                "process_monitor#ryuk_text": "procmon ryuk text",
+                "procname": "Process name",
+                "protected": "Read only",
+                "registry": "registry",
+                "rules": "Rules",
+                "scope": "Scope",
+                "subkey": "Subkey",
+                "unseen": "Hidden",
+                "usermode": "Scope",
+                "value": "Value",
+                "visible": "Visible",
+                "vssprotect": "vssprotect",
+                "warning": "warning",
+                "whitelist": "White list"
+            },
+            "type": "Type"
+        },
+        "globalActions": {
+            "export": {
+                "name": "Export vaccines"
+            },
+            "import": {
+                "dialog": {
+                    "title": "Import vaccines"
+                },
+                "name": "Import vaccines"
+            }
+        },
+        "headers": {
+            "auto": "no apply/apply",
+            "description": "Description",
+            "expiration": "valid until",
+            "min_version": "min. version",
+            "os": "operating system",
+            "selection": "selection",
+            "status": "status",
+            "type": "type",
+            "upgrade": "upgrade",
+            "vaccination": "vaccination",
+            "version": "version",
+            "visibility": "Visibility"
+        },
+        "incremental": "+ Create a new vaccine",
+        "label": "vaccines",
+        "modal": {
+            "apply": {
+                "content": "Do you want to continue applying selected vaccines?",
+                "title": "Apply vaccines"
+            },
+            "delete": {
+                "content": "Do you want to continue with the vaccine deletion?",
+                "title": "Delete vaccine"
+            }
+        },
+        "notallowed": {
+            "version": "Vaccine not valid for that version"
+        },
+        "placeholder": "what vaccine are you looking for?"
+    },
+    "validations": {
+        "invalidEmail": "The email does not seem correct",
+        "required": "The field is required",
+        "userExists": "User already exists"
+    }
+}

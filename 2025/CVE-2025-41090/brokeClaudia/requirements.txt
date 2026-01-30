@@ -1,0 +1,4 @@
+colorist==1.1.2
+inquirerpy==0.3.4
+prettytable==3.9.0
+requests==2.31.0

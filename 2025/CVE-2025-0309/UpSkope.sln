@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpSkope", "UpSkope\UpSkope.csproj", "{34931C7E-5395-4E12-80F0-0BB31801C8AB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D46F0B6B-2D10-4497-8CBE-13CA9A713A1D} = {D46F0B6B-2D10-4497-8CBE-13CA9A713A1D}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IPCProxy", "IPCProxy\IPCProxy.vcxproj", "{D46F0B6B-2D10-4497-8CBE-13CA9A713A1D}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "STAgent", "STAgent\STAgent\STAgent.vdproj", "{244A2558-8BBF-4195-3C17-BB33ACE40EEB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CustomAction", "CustomAction\CustomAction.vcxproj", "{E0CB261E-C5C1-4345-9993-69DCD359797D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34931C7E-5395-4E12-80F0-0BB31801C8AB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{34931C7E-5395-4E12-80F0-0BB31801C8AB}.Debug|x86.Build.0 = Debug|Any CPU
+		{34931C7E-5395-4E12-80F0-0BB31801C8AB}.Release|x86.ActiveCfg = Release|Any CPU
+		{34931C7E-5395-4E12-80F0-0BB31801C8AB}.Release|x86.Build.0 = Release|Any CPU
+		{D46F0B6B-2D10-4497-8CBE-13CA9A713A1D}.Debug|x86.ActiveCfg = Debug|Win32
+		{D46F0B6B-2D10-4497-8CBE-13CA9A713A1D}.Debug|x86.Build.0 = Debug|Win32
+		{D46F0B6B-2D10-4497-8CBE-13CA9A713A1D}.Release|x86.ActiveCfg = Release|Win32
+		{D46F0B6B-2D10-4497-8CBE-13CA9A713A1D}.Release|x86.Build.0 = Release|Win32
+		{244A2558-8BBF-4195-3C17-BB33ACE40EEB}.Debug|x86.ActiveCfg = Debug
+		{244A2558-8BBF-4195-3C17-BB33ACE40EEB}.Debug|x86.Build.0 = Debug
+		{244A2558-8BBF-4195-3C17-BB33ACE40EEB}.Release|x86.ActiveCfg = Release
+		{244A2558-8BBF-4195-3C17-BB33ACE40EEB}.Release|x86.Build.0 = Release
+		{E0CB261E-C5C1-4345-9993-69DCD359797D}.Debug|x86.ActiveCfg = Debug|Win32
+		{E0CB261E-C5C1-4345-9993-69DCD359797D}.Debug|x86.Build.0 = Debug|Win32
+		{E0CB261E-C5C1-4345-9993-69DCD359797D}.Release|x86.ActiveCfg = Release|Win32
+		{E0CB261E-C5C1-4345-9993-69DCD359797D}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7D079127-2B1E-4779-A9AF-532359B00035}
+	EndGlobalSection
+EndGlobal
